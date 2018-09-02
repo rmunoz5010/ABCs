@@ -51,7 +51,7 @@ const Topics = ({ match }) => (
   </div>
 )
 
-const BasicExample = () => (
+const App = () => (
   <Router>
     <div>
       <div className="navbar navbar-dark bg-dark" >
@@ -75,4 +75,4 @@ const BasicExample = () => (
     </div>
   </Router>
 )
-export default BasicExample
+export default App

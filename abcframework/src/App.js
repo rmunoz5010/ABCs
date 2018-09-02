@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 
 const Home = () => (
-  <div classname= "container-fluid">
+  <div>
     <h2>Home</h2>
   </div>
 )
@@ -54,13 +54,20 @@ const Topics = ({ match }) => (
 const BasicExample = () => (
   <Router>
     <div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/topics">Topics</Link></li>
-      </ul>
-
-      <hr/>
+      <div className="navbar navbar-dark bg-dark" >
+        <div className="navbar-brand">APEX</div>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className=" navbar-collapse collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <Link to="/" className="nav-link nav-item">Home</Link>
+            <Link to="/about" className="nav-link nav-item">About</Link>
+            <Link to="/topics" className="nav-link nav-item">Topics</Link>
+          
+          </div>
+        </div>
+      </div>
 
       <Route exact path="/" component={Home}/>
       <Route path="/about" component={About}/>

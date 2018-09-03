@@ -4,11 +4,10 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import Homepage from './pages/home'
 
 const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
+  <Homepage />
 )
 
 const About = () => (

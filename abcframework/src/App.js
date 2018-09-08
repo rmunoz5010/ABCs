@@ -5,50 +5,23 @@ import {
   Link
 } from 'react-router-dom'
 import Homepage from './pages/home'
+import Newspage from './pages/news'
 
 const Home = () => (
   <Homepage />
 )
 
-const About = () => (
+const News = () => (
+  <Newspage/>
+)
+
+const Roster = () => (
   <div>
-    <h2>About</h2>
+    <h3>Roster</h3>
   </div>
 )
 
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
-  </div>
-)
 
-const Topics = ({ match }) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>
-          Rendering with React
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>
-          Components
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>
-          Props v. State
-        </Link>
-      </li>
-    </ul>
-
-    <Route path={`${match.path}/:topicId`} component={Topic}/>
-    <Route exact path={match.path} render={() => (
-      <h3>Please select a topic.</h3>
-    )}/>
-  </div>
-)
 
 const App = () => (
   <Router>
@@ -61,16 +34,16 @@ const App = () => (
           <div className=" navbar-collapse collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <Link to="/" className="nav-link nav-item">Home</Link>
-            <Link to="/about" className="nav-link nav-item">About</Link>
-            <Link to="/topics" className="nav-link nav-item">Topics</Link>
+            <Link to="/news" className="nav-link nav-item">News</Link>
+            <Link to="/roster" className="nav-link nav-item">Roster</Link>
           
           </div>
         </div>
       </div>
 
       <Route exact path="/" component={Home}/>
-      <Route path="/about" component={About}/>
-      <Route path="/topics" component={Topics}/>
+      <Route path="/news" component={News}/>
+      <Route path="/roster" component={Roster}/>
     </div>
   </Router>
 )

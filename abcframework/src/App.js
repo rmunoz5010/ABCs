@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import Homepage from './pages/home'
 import Newspage from './pages/news'
+import Rosterpage from './pages/roster'
 
 const Home = () => (
   <Homepage />
@@ -16,9 +17,7 @@ const News = () => (
 )
 
 const Roster = () => (
-  <div>
-    <h3>Roster</h3>
-  </div>
+  <Rosterpage />
 )
 
 

@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
 
+
+
 class Newscontainer extends Component{
     render(){
         return(
-            <div>
-                <h1>{this.props.newstitle}</h1>
-                <p>{this.props.newsbody}</p>
+            <div className="newsClass">
+                <div className="card">
+                    <h1 className="card-header text-right">{this.props.newstitle}</h1>
+                    <div className="card-body row">{this.props.newsbody}</div>
+                    <div className="card-footer text-muted">
+                        {this.props.newsdate}
+                    </div>
+                </div>
+                
             </div>
         );
     };

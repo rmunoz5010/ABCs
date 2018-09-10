@@ -2,8 +2,25 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: rgb(238, 233, 233);
 }
 
 .jumbotronClass{
   padding-top: 10%;
-};
+}
+
+.jumbotron{
+  border-style: solid;
+  background-color: lightgray;
+}
+.newsClass{
+  padding-top: 3%;
+}
+
+.badge{
+  font-size:12px;
+}
+
+.card-header{
+  background-color:lightgreen;
+}

@@ -31,3 +31,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.jumbotronClass{
+  padding-top: 10%;
+}
+
+.newsClass{
+  padding-top: 10%;
+}
+
